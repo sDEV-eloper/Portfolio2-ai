@@ -2,39 +2,64 @@
 
 import React, { useState } from "react";
 import Logo from "@/public/images/slogo.png";
+import LogoCircle from "@/public/images/slogo_circle.png";
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn, FaWhatsapp} from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { useEffect } from "react";
+
 
 const Navbar = () => {
-    const [nav, setNav]=useState(false)
-    const handleNav=()=>{
-        setNav(!nav)
-    }
 
+  const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+  };
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY > 0) {
+        return setShadow(true);
+      } else {
+        return setShadow(false);
+      }
+    };
+    window.addEventListener('scroll', handleShadow);
+  },[]);
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div
+      className={
+        shadow
+          ? `fixed w-full h-20 shadow-xl z-[999] ease-in-out duration-300`
+          : `fixed w-full h-20 z-[999] `
+      }
+    >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image src={Logo} alt="Logo" width={40} height={40} />
-        <div>
+        <Link href="/" >
+          <div className="flex gap-4 justify-between items-center">
+          <Image src={Logo} alt="Logo" width={50} height={50} className="rounded-full" />
+          <span className="text-3xl font-bold">PORTFOLIO</span>
+          </div>
+        </Link>
+        <div >
           <ul className="hidden md:flex">
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
+            <Link href="/" >
+              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>Home</li>
             </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
+            <Link href="/#about">
+              <li  className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>About</li>
             </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+            <Link href="/#skills" >
+              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>Skills</li>
             </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+            <Link href="/#projects" >
+              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
                 Project
               </li>
             </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+            <Link href="/#contact" >
+              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
                 Contact
               </li>
             </Link>
@@ -45,56 +70,69 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={nav?" md:hidden fixed left-0 top-0 w-full h-screen bg-black/70":""}>
-        <div className={ nav?
-    "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-gray-100 p-10 ease-in duration-500":
-    "fixed left-[-100%] top-0 ease-in duration-500"}>
+      <div
+        className={
+          nav ? " md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+        }
+      >
+
+      {/* Left menu Navbar */}
+        <div
+          className={
+            nav
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-gray-100 p-10 ease-in duration-500"
+              : "fixed left-[-100%] top-0 ease-in duration-500"
+          }
+        >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image src={Logo} width={40} height={40} alt="logo" />
-              <div onClick={handleNav} className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer">
+              <Image src={LogoCircle} width={80}  alt="logo" />
+              <div
+                onClick={handleNav}
+                className="rounded-full bg-black text-white  shadow-lg shadow-gray-400 p-2 cursor-pointer text-2xl "
+              >
                 <AiOutlineClose />
               </div>
             </div>
 
             <div className="border-b border-gray-300 my-4">
-              <p className="w-[85%] md:w[90%] py-4">Lets Build something</p>
+              <p className="w-[85%] text-xl md:w[90%] py-4">Lets explore the portfolio</p>
             </div>
           </div>
           <div className="py-4 flex flex-col">
-            <ul className="uppercase">
+            <ul className="uppercase" onClick={()=>setNav(false)}>
               <Link href="/">
-                <li className="py-4 text-sm">Home</li>
+                <li className="py-4 text-lg p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white">Home</li>
               </Link>
-              <Link href="/about">
-                <li className="py-4 text-sm">About</li>
+              <Link href="/#about">
+                <li className="py-4 text-lg p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white">About</li>
               </Link>
-              <Link href="/skills">
-                <li className="py-4 text-sm">Skills</li>
+              <Link href="/#skills">
+                <li className="py-4 text-lg p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white">Skills</li>
               </Link>
-              <Link href="/projects">
-                <li className="py-4 text-sm">Projects</li>
+              <Link href="/#projects">
+                <li className="py-4 text-lg p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white">Projects</li>
               </Link>
-              <Link href="/contact">
-                <li className="py-4 text-sm">Contact</li>
+              <Link href="#/contact">
+                <li className="py-4 text-lg p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white">Contact</li>
               </Link>
             </ul>
             <div className="pt-12">
               <p className="uppercase tracking-widest text-blue-600">
                 Let's Connect
               </p>
-              <div className="flex items-center jb my-4 wf sm:w-[80%] gap-2">
-                <div className="bg-blue-600 text-white text-lg rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
+              <div className="flex items-center jb my-4 wf sm:w-[80%] gap-8">
+                <div className="bg-blue-600 text-white text-2xl rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
                   <FaLinkedinIn />
                 </div>
-                <div className="bg-gray-800 text-white text-lg rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
+                <div className="bg-gray-800 text-white text-2xl rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
                   <FaGithub />
                 </div>
-                <div className="bg-green-600 text-white text-lg rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
-                  <FaWhatsapp /> 
+                <div className="bg-green-600 text-white text-2xl rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
+                  <FaWhatsapp />
                 </div>
-                <div className="bg-red-600 text-white  text-lg rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
-                  <AiOutlineMail /> 
+                <div className="bg-red-600 text-white  text-2xl rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
+                  <AiOutlineMail />
                 </div>
               </div>
             </div>

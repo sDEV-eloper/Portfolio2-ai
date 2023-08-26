@@ -3,7 +3,6 @@ import { projectsData } from "./constant";
 import ProjectItems from "./ProjectsItems";
 
 const Projects = () => {
-  console.log(projectsData)
   return (
     <div id="projects" className="w-full">
       <div className=" mx-auto px-2 py-16">
