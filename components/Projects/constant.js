@@ -7,26 +7,26 @@ import comingSoonImg from '@/public/images/commingSoon.png';
     {
         title:'VStream',
         backgroundImg:vstreamImg,
-        projectUrl:'/property',
+        projectUrl:'https://vstreams.netlify.app/',
         tech:'React JS, TailwindCSS, RapidAPI',
     },
     {
         title:'Let\'s Chat',
         backgroundImg:letsChatImg,
-        projectUrl:'/crypto',
+        projectUrl:'https://velvety-haupia-f41530.netlify.app/',
         tech:'React JS, Firebase',
       
     },
     {
         title:'NextBook',
         backgroundImg:bookRecImg,
-        projectUrl:'/netflix',
+        projectUrl:'https://github.com/sDEV-eloper/nextBook',
         tech:'Machine Learning, Python, Flask, Html, Css',
     },
     {
         title:'Comming...',
         backgroundImg:comingSoonImg,
-        projectUrl:'/twitch',
+        projectUrl:'',
         tech:'based on trending tech',
     },
 ]

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Logo from "@/public/images/slogo.png";
 import LogoCircle from "@/public/images/slogo_circle.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,35 +30,35 @@ const Navbar = () => {
     <div
       className={
         shadow
-          ? `fixed w-full h-20 shadow-xl z-[999] ease-in-out duration-300`
-          : `fixed w-full h-20 z-[999] `
+          ? `fixed w-full h-20 shadow-xl z-[999] ease-in-out duration-300 bg-[#45e7f9]`
+          : `fixed w-full h-20 z-[999] bg-gradient-to-b from-white to-[#c5fffe]`
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href="/" >
           <div className="flex gap-4 justify-between items-center">
-          <Image src={Logo} alt="Logo" width={50} height={50} className="rounded-full" />
+          <Image src={LogoCircle} alt="Logo" width={60} height={60} className="rounded-full" />
           <span className="text-3xl font-bold">PORTFOLIO</span>
           </div>
         </Link>
         <div >
           <ul className="hidden md:flex">
             <Link href="/" >
-              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>Home</li>
+              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>Home</li>
             </Link>
             <Link href="/#about">
-              <li  className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>About</li>
+              <li  className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>About</li>
             </Link>
             <Link href="/#skills" >
-              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>Skills</li>
+              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>Skills</li>
             </Link>
             <Link href="/#projects" >
-              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
+              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
                 Project
               </li>
             </Link>
             <Link href="/#contact" >
-              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-500  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
+              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
                 Contact
               </li>
             </Link>

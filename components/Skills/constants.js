@@ -121,15 +121,14 @@ export const mainTech = skillsList.filter((skill) =>
   [
     "HTML",
     "CSS",
+    "SASS",
+    "TAILWIND CSS",
     "JAVASCRIPT",
     "TYPESCRIPT", 
     "REACTJS",
     "NEXTJS",
-    "SASS",
-    "TAILWIND CSS",
-    "JAVA",
     "GIT",
-    "GITHUB",
+    "JAVA",
   ].includes(skill.name)
 );
 
