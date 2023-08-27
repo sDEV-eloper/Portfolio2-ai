@@ -118,7 +118,7 @@ const Navbar = () => {
             </ul>
             <div className="pt-12">
               <p className="uppercase tracking-widest text-blue-600">
-                Let's Connect
+                Let&apos;s Connect
               </p>
               <div className="flex items-center jb my-4 wf sm:w-[80%] gap-8">
                 <div className="bg-blue-600  text-white text-2xl rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
