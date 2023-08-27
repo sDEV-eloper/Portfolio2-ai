@@ -30,8 +30,8 @@ const Navbar = () => {
     <div
       className={
         shadow
-          ? `fixed w-full h-20 shadow-xl z-[999] ease-in-out duration-300 bg-[#45e7f9]`
-          : `fixed w-full h-20 z-[999] bg-gradient-to-b from-white to-[#c5fffe]`
+          ? `fixed container top-0 left-0  w-full h-20 shadow-xl z-[999] ease-in-out duration-300 bg-gradient-to-b from-white to-[#c5fffe] `
+          : `fixed container top-0 left-0 w-full h-20 z-[999] bg-gradient-to-b from-white to-white `
       }
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
@@ -44,21 +44,21 @@ const Navbar = () => {
         <div >
           <ul className="hidden md:flex">
             <Link href="/" >
-              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>Home</li>
+              <li className={`ml-10 text-sm p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>Home</li>
             </Link>
             <Link href="/#about">
-              <li  className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>About</li>
+              <li  className={`ml-10 text-sm p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white `}>About</li>
             </Link>
             <Link href="/#skills" >
-              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>Skills</li>
+              <li className={`ml-10 text-sm p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>Skills</li>
             </Link>
             <Link href="/#projects" >
-              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
+              <li className={`ml-10 text-sm p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
                 Project
               </li>
             </Link>
             <Link href="/#contact" >
-              <li className={`ml-10 text-md p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
+              <li className={`ml-10 text-sm p-2 rounded-lg font-medium text-gray-700  uppercase hover:bg-gradient-to-tl from-blue-500 to-purple-600 hover:text-white`}>
                 Contact
               </li>
             </Link>
@@ -121,7 +121,7 @@ const Navbar = () => {
                 Let's Connect
               </p>
               <div className="flex items-center jb my-4 wf sm:w-[80%] gap-8">
-                <div className="bg-blue-600 text-white text-2xl rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
+                <div className="bg-blue-600  text-white text-2xl rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">
                   <FaLinkedinIn />
                 </div>
                 <div className="bg-gray-800 text-white text-2xl rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 ">

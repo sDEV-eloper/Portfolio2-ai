@@ -8,6 +8,7 @@ import Contact from '@/components/Contact/Contact'
 export default function MainPage() {
   return (
    <>
+   {/* <Navbar/> */}
    <Home/>
    <About/>
    <Projects/>

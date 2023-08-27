@@ -21,27 +21,26 @@ const Contact = () => {
             <div className='lg:p-4 h-full '>
               <div>
                 <Image
-                  className='rounded-xl hover:scale-105 ease-in duration-300'
+                  className='rounded-lg hover:scale-105 ease-in duration-300 p-8 '
                   src={ContactImg}
                   alt='/'
                 />
               </div>
               <div>
                 <h2 className='py-4 text-center text-white'>Suraj Singh</h2>
-                <p className='py-4 text-xl text-center text-white'>
-                  I am available for full-time positions. Contact
-                  me and let&apos;s talk.
+                <p className='p-4 md:text-xl sm:text-md text-center text-white'>
+                I am actively seeking full-time positions and would welcome the opportunity to connect with you. Please feel free to reach out, and let's have a conversation about how I can contribute to your team.
                 </p>
               </div>
-              <div>
+              <div >
                 <p className='uppercase pt-8 font-bold text-center text-gray-200'>Connect With Me</p>
-                <div className='flex items-center justify-between py-4'>
+                <div className='flex  items-center gap-16 justify-center py-4'>
                 <Link
               href='https://www.linkedin.com/in/surajsingh09/'
               target='_blank'
               rel='noreferrer'
             >
-               <div className="bg-blue-600 text-white text-4xl p-3 rounded-lg shadow-lg shadow-gray-800  cursor-pointer hover:scale-105 ease-in duration-300 ">
+               <div className="bg-blue-600  text-white text-4xl p-3 rounded-lg shadow-lg shadow-gray-800  cursor-pointer hover:scale-105 ease-in duration-300 ">
                   <FaLinkedinIn />
                 </div>
                
@@ -73,7 +72,7 @@ const Contact = () => {
           </div>
 
           {/* right */}
-          <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+          <div className=' sm:p-16 col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
             <div className='p-4 '>
               <form
                 action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
