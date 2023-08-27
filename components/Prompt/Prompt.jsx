@@ -29,7 +29,7 @@ const Prompt = () => {
 
   return (
     <>
-    <div className="md:w-1/2 sm:w-full">
+    <div className="md:w-[70%] sm:w-full sm:px-12">
       <p className="text-lg font-bold mb-4">Ask me anything!</p>
       
 <form onSubmit={handleSubmit} >   

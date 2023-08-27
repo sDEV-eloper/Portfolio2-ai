@@ -6,10 +6,10 @@ const Projects = () => {
   return (
     <div id="projects" className="w-full p-16">
       <div className=" mx-auto px-2 py-16 w-full">
-        <p className="text-2xl font-bold tracking-widest uppercase text-[#5651e5]">
+        <p className="text-xl font-bold tracking-widest uppercase text-[#5651e5]">
           Projects
         </p>
-        <h2 className="py-4">Look, What I&apos;ve Built</h2>
+        <h3 className="py-4 text-2xl font-bold">Look, What I&apos;ve Built</h3>
         <div className="grid md:grid-cols-3 gap-8 ">
           {projectsData.map((item) => (
             <ProjectItems

@@ -4,17 +4,17 @@ import { familiarTech, mainTech } from './constants';
 
 const Skills = () => {
   return (
-    <div id='skills' className='w-full lg:h-screen p-2'>
+    <div id='skills' className='w-full md:min-h-screen  p-24'>
       <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
-        <p className='text-2xl font-bold  tracking-widest uppercase text-[#5651e5]'>
+        <p className='text-xl font-bold  tracking-widest uppercase text-[#5651e5]'>
           Skills
         </p>
-        <h2 className='py-4'>Favourite Stack</h2>
+        <p className='py-4 text-2xl font-bold'>Favourite Stack</p>
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
 
          {mainTech.map((item)=>
           (
-          <div key={item.id} className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 bg-white'>
+          <div key={item.id} className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 bg-white '>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
                 <Image src={item.logo} width='64px' height='64px' alt='/' />
